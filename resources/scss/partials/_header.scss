@@ -1,0 +1,49 @@
+$color-primary: #0282f9;
+$color-secondary: #303030;
+$color-tertiary: #797979;
+
+header img {
+  width: 72px;
+}
+
+header .nav-link {
+  color: black;
+}
+
+header li {
+  position: relative;
+
+}
+
+header li::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  height: 5px;
+  width: 100%;
+  background-color: $color-primary;
+  scale: 0 1;
+  transition: scale 250ms;
+}
+
+header li:hover::after{
+  scale: 1 1;
+}
+
+header a:hover,
+header a:focus-visible {
+  color: $color-primary;
+}
+
+header .btn-custom {
+  color: white;
+  background-color: rgb(13, 110, 253);
+  border-radius: 0%;
+}
+
+.link-top {
+  font-size: .8rem;
+  color: white;
+  text-decoration: none;
+}

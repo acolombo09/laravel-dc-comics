@@ -1,0 +1,38 @@
+$color-primary: #0282f9;
+$color-secondary: #303030;
+$color-tertiary: #797979;
+
+.container-jumbo-cards{
+  min-height: 390px;
+}
+.jumbotron-custom {
+  background-image: url(/public/images/jumbotron.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 360px;
+  .btn {
+    bottom: 0;
+    left: 12%;
+    transform: translateY(50%);
+  }
+}
+.cards-list{
+  min-height: 500px;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  background-color: $color-secondary;
+
+  img {
+    aspect-ratio: 1/1;
+  }
+
+  button {
+    width: 180px;
+  }
+}
+
+.container-jumbo-cards .btn-custom {
+  color: white;
+  background-color: rgb(13, 110, 253);
+  border-radius: 0%;
+}

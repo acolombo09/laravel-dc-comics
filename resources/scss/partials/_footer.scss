@@ -1,0 +1,38 @@
+$color-primary: #0282f9;
+$color-secondary: #303030;
+$color-tertiary: #797979;
+
+.footer-upper{
+  background-image: url(/public/images/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .div-logo{
+    min-height: 400px;
+    overflow: hidden;
+  }
+  .logo-img{
+    height: 120%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  a{
+    text-decoration: none;
+    color: $color-tertiary;
+  }
+}
+
+.footer-lower{
+  background-color: $color-secondary;
+}
+
+.footer-title {
+  color: white;
+}
+
+.footer .btn-custom {
+  color: white;
+  background-color: rgb(13, 110, 253);
+  border-radius: 0%;
+}
