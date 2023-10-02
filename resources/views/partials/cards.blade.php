@@ -2,7 +2,8 @@
   $comics = config('comics');
 @endphp
 
-  <div class="container-fluid cards-list">
+  <div class="container-fluid cards-list position-relative">
+    <button class="btn btn-custom btn-custom-bottom position-absolute fw-bold fs-5 px-4">CURRENT SERIES</button>
     <div class="row">
       <div class="col-md-9 mx-auto px-0 d-flex justify-content-center flex-wrap">
         <div class="row row-cols-6 g-3">

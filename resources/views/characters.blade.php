@@ -1,6 +1,6 @@
 @extends("layouts.public")
 
-@section("title", "DC Comics - Characters-HomePage")
+@section("title", "DC Comics - Characters")
 
 @section("content")
 

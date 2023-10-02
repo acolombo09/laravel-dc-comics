@@ -8,55 +8,16 @@ use Illuminate\Support\Facades\Route;
 // HOMEPAGE
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
-Route::get('characters', function () {
-  return view('characters');
-});
-
-Route::get('movies', function () {
-
-
-  return view('movies');
-});
-
-Route::get('tv', function () {
-
-
-  return view('tv');
-});
-
-Route::get('games', function () {
-
-
-  return view('games');
-});
-
-Route::get('collectibles', function () {
-
-  return view('collectibles');
-});
-
-Route::get('videos', function () {
-
-
-  return view('videos');
-});
-
-Route::get('fans', function () {
-
-
-  return view('fans');
-});
-
-Route::get('news', function () {
-
-
-  return view('news');
-});
-
-Route::get('shop', function () {
-
-  return view('shop');
-});
+Route::get('/characters', [HomeController::class, 'characters'])->name('characters');
+Route::get('/comics', [HomeController::class, 'comics'])->name('comics');
+Route::get('/movies', [HomeController::class, 'movies'])->name('movies');
+Route::get('/tv', [HomeController::class, 'tv'])->name('tv');
+Route::get('/games', [HomeController::class, 'games'])->name('games');
+Route::get('/collectibles', [HomeController::class, 'collectibles'])->name('collectibles');
+Route::get('/videos', [HomeController::class, 'videos'])->name('videos');
+Route::get('/fans', [HomeController::class, 'fans'])->name('fans');
+Route::get('/news', [HomeController::class, 'news'])->name('news');
+Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 
 // ROTTE READ CRUD
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
