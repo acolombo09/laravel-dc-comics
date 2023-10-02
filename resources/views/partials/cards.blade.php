@@ -7,7 +7,7 @@
       <div class="col-md-9 mx-auto px-0 d-flex justify-content-center flex-wrap">
         <div class="row row-cols-6 g-3">
           @foreach ($comics as $comic)
-            <a href="/" class="text-decoration-none">
+            <a href="/comics" class="text-decoration-none">
               <div class="col">
                 <div class="card border-0 rounded-0 bg-transparent">
                   <img src="{{ $comic['thumb'] }}" class="card-img-top rounded-0" alt="{{ $comic['series'] }}">

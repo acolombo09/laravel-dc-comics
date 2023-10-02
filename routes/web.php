@@ -1,17 +1,16 @@
 <?php
+
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [ComicController::class, 'index'])->name('comics.index');
+
+// HOMEPAGE
+Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
 Route::get('characters', function () {
   return view('characters');
 });
-
-// Route::get('comics', function () {
-
-//   return view('comics');
-// });
 
 Route::get('movies', function () {
 
@@ -58,4 +57,8 @@ Route::get('shop', function () {
 
   return view('shop');
 });
+
+// ROTTE READ CRUD
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+// Route::get("/pasta/{pasta}", [PastaController::class, "show"])->name("pasta.show");
 ?>
