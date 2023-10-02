@@ -23,5 +23,5 @@ Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 
 // ROTTE READ CRUD
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
-// Route::get("/pasta/{pasta}", [PastaController::class, "show"])->name("pasta.show");
+Route::get("/comics/{comic}", [ComicController::class, "show"])->name("comics.show");
 ?>

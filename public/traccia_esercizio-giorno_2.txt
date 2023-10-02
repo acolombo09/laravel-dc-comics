@@ -1,0 +1,10 @@
+nome repo: laravel-dc-comics
+
+Ciao ragazzi,
+lavoriamo sulla stessa repo dell’altro giorno implementando
+la rotta create e store nella nostra applicazione.
+Qualora la index e show non l’avessimo finita, 
+la completiamo.
+
+BONUS:
+Aggiungere una validazione base dei dati ricevuti.
