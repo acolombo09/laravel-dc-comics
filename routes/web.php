@@ -1,16 +1,17 @@
 <?php
-
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', [ComicController::class, 'index'])->name('comics.index');
 
-Route::get('/', function () {
-  return view('home');
+Route::get('characters', function () {
+  return view('characters');
 });
 
-Route::get('comics', function () {
+// Route::get('comics', function () {
 
-  return view('comics');
-});
+//   return view('comics');
+// });
 
 Route::get('movies', function () {
 

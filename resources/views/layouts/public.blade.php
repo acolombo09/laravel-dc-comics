@@ -23,13 +23,12 @@
       <div class="col">
         @include("partials.navbar")
         <main>
+          @include("partials.jumbotron")
           {{-- segnaposto che verrà sostituito con il contenuto di ogni pagina --}}
           {{-- nelle altre pagine devo indicare cosa inserire in questo segnaposto --}}
           @yield("content")
-          @include("partials.cards")
 
         </main>
-        @include("partials.banner")
         @include("partials.footer")
       </div>
     </div>

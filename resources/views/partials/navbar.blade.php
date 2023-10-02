@@ -1,6 +1,6 @@
 <?php
   $headerLinks = [
-    'HOME',
+    'CHARACTERS',
     'COMICS',
     'MOVIES',
     'TV',
@@ -27,12 +27,14 @@
   </div>
   <div class="row py-2">
     <div class="col-md-9 d-flex align-items-center justify-content-around mx-auto px-0">
-      <img src="/images/dc-logo.png" alt="dc-logo-header">
+      <a href="/">
+        <img src="/images/dc-logo.png" alt="dc-logo-header">
+      </a>
       <ul class="nav nav-pills">
         @foreach ($headerLinks as $link)
         <li class="nav-item">
-          @if ($link === 'HOME')
-            <a class="nav-link" href="/">
+          @if ($link === 'COMICS')
+            <a class="nav-link" href="{{ route('comics.index') }}">
               {{ $link }}
             </a>
           @else

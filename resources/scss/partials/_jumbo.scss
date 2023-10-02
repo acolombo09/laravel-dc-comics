@@ -1,0 +1,22 @@
+$color-primary: #0282f9;
+$color-secondary: #303030;
+$color-tertiary: #797979;
+
+.jumbotron-custom {
+  background-image: url(/public/images/jumbotron.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 390px;
+  
+  .btn-custom-bottom {
+    bottom: 0;
+    transform: translateY(50%);
+    left: 12.3%;
+  }
+
+  .btn-custom {
+    color: white;
+    background-color: rgb(13, 110, 253);
+    border-radius: 0%;
+  }
+}
