@@ -34,11 +34,11 @@
         @foreach ($headerLinks as $link)
         <li class="nav-item">
           @if ($link === 'COMICS')
-            <a class="nav-link" href="{{ route('comics.index') }}">
+            <a class="nav-link {{ Request::is(strtolower($link)) ? 'active' : '' }}" href="{{ route('comics.index') }}">
               {{ $link }}
             </a>
           @else
-            <a class="nav-link" href="/{{ strtolower($link) }}">
+            <a class="nav-link {{ Request::is(strtolower($link)) ? 'active' : '' }}" href="/{{ strtolower($link) }}">
               {{ $link }}
             </a>
           @endif

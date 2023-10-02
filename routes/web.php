@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
 Route::get('/characters', [HomeController::class, 'characters'])->name('characters');
+// pagina comics inserita nel progetto iniziale, non la elimino per ora
+// NON confonderla con la pagina comics.index
 Route::get('/comics', [HomeController::class, 'comics'])->name('comics');
 Route::get('/movies', [HomeController::class, 'movies'])->name('movies');
 Route::get('/tv', [HomeController::class, 'tv'])->name('tv');
