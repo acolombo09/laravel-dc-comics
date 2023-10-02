@@ -1,0 +1,14 @@
+$color-primary: #0282f9;
+$color-secondary: #303030;
+$color-tertiary: #797979;
+
+.container-blue {
+  background-color: $color-primary;
+  height: 72px;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  bottom: 281px;
+}
