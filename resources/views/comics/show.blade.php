@@ -2,7 +2,7 @@
 @extends("layouts.public")
 
 {{-- Versione compatta per indicare il contenuto di uno yield --}}
-@section("title", $comics->title . " - DC Comics")
+@section("title", $comic->title . " - DC Comics")
 
 {{-- incido cosa inserire al posto dello yield("content") presente nel layout --}}
 @section("content")
