@@ -1,14 +1,33 @@
 $color-primary: #0282f9;
 $color-secondary: #303030;
 $color-tertiary: #797979;
+$color-show-titles: #003f5e;
 
 .container-blue {
   background-color: $color-primary;
-  height: 72px;
+  height: 81px;
   position: relative;
+
+  .card {
+    position: absolute;
+    bottom: 24px;
+    width: 150px;
+  }
 }
 
-.card {
-  position: absolute;
-  bottom: 281px;
+.show-title {
+  color: $color-show-titles;
 }
+
+.bg-light-green {
+  background-color: #55ba59;
+}
+
+.bannerino {
+  img {
+    width: 39px;
+    margin: 2rem 0rem;
+    filter: grayscale(100%);
+  }
+}
+

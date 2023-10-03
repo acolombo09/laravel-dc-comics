@@ -13,7 +13,14 @@ class ComicController extends Controller {
     }
 
     public function show($id) {
-        $comic = Comic::find($id);
+        $comic = Comic::findOrFail($id);
+
+        // aggiungo un controllo in caso di id inesistente, suggerito da Florian
+        // versione completa qui sotto, ma userò findOrFail
+        // if(!$comic) {
+        //     abort(404);
+        // }
+
         return view("comics.show", ["comic" => $comic]);
     }
 }
