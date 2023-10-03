@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="col-2 ms-auto mt-3">
-        {{-- button per tornare indietro nella index, non richiesto --}}
+      {{-- button per tornare indietro nella index, non richiesto --}}
       <a href={{ route("comics.index", ["id" => $comic->id]) }} class="btn btn-lg btn-outline-light">Indietro</a>
       </div>
     </div>
@@ -78,13 +78,19 @@
               <th scope="row">
                 <h6 class="show-title text-nowrap">Art by:</h6>
               </th>
-              <td colspan="2"><a class="text-decoration-none" href="#">{{ $comic->artists }}</a></td>
+              <td colspan="2">
+                {{-- implode aggiunto a seguito del cast nel model per l'array --}}
+                <a class="text-decoration-none" href="#">{{ implode(", ", $comic->artists) }}</a>
+              </td>
             </tr>
             <tr>
               <th scope="row">
                 <h6 class="show-title text-nowrap">Written by:</h6>
               </th>
-              <td colspan="2"><a class="text-decoration-none" href="#">{{ $comic->writers }}</a></td>
+              <td colspan="2">
+                {{-- implode aggiunto a seguito del cast nel model per l'array --}}
+                <a class="text-decoration-none" href="#">{{ implode(", ", $comic->writers) }}</a>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -112,7 +118,8 @@
               <th scope="row">
                 <h6 class="show-title">On Sale Date</h6>
               </th>
-              <td colspan="2">{{ $comic->sale_date }}</td>
+              {{-- errore format, uso laravel casts. vai in nel model comic--}}
+              <td colspan="2">{{ $comic->sale_date->format('M d Y') }}</td>
             </tr>
           </tbody>
         </table>

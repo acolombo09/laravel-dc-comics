@@ -1,0 +1,11 @@
+nome repo: laravel-dc-comics
+
+Ciao ragazzi,
+lavoriamo sulla stessa repo dell’altro giorno implementando 
+la rotta edit , update e destroy nella nostra applicazione.
+Qualora le precedenti rotte non le avessimo finite, 
+le completiamo.
+
+BONUS:
+- Mostrare gli errori di validation nel form.
+- Usare i FormRequest per la validazione.

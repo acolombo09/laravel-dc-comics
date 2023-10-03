@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 // HOMEPAGE
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
+// SIDE PAGES
 Route::get('/characters', [HomeController::class, 'characters'])->name('characters');
 // pagina comics inserita nel progetto iniziale, non la elimino per ora
 // NON confonderla con la pagina comics.index
@@ -21,7 +22,10 @@ Route::get('/fans', [HomeController::class, 'fans'])->name('fans');
 Route::get('/news', [HomeController::class, 'news'])->name('news');
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 
-// ROTTE READ CRUD
+// ROTTE CRUD CREATE & STORE
+Route::get("/comics/create", [ComicController::class, "create"])->name("comics.create");
+Route::post("/comics", [ComicController::class, "store"])->name("comics.store");
+
+// ROTTE READ CRUD, le ho spostate in fondo per conflitto di uri causa parametro dinamico {comic}
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 Route::get("/comics/{comic}", [ComicController::class, "show"])->name("comics.show");
-?>
