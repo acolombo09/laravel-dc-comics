@@ -26,6 +26,13 @@ Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 Route::get("/comics/create", [ComicController::class, "create"])->name("comics.create");
 Route::post("/comics", [ComicController::class, "store"])->name("comics.store");
 
-// ROTTE READ CRUD, le ho spostate in fondo per conflitto di uri causa parametro dinamico {comic}
+// ROTTE CRUD READ, le ho spostate in fondo per conflitto di uri causa parametro dinamico {comic}
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 Route::get("/comics/{comic}", [ComicController::class, "show"])->name("comics.show");
+
+// ROTTE CRUD UPDATE
+Route::get("/comics/{id}/edit", [ComicController::class, "edit"])->name("comics.edit");
+Route::put("/comics/{id}", [ComicController::class, "update"])->name("comics.update");
+
+// ROTTA CRUD DESTROY
+Route::delete("/comics/{id}", [ComicController::class, "destroy"])->name("comics.destroy");

@@ -21,6 +21,7 @@ class Comic extends Model {
         "writers" => "array",
     ];
     
+    // serve per il fill() o update()
     protected $fillable = [
         "title",
         "description",
