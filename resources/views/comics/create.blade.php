@@ -21,38 +21,74 @@
           <div class="mb-3">
             <label class="form-label">Title</label>
             <input type="text" class="form-control form-control-lg w-100" name="title" placeholder="Green Arrow">
+            @error("title")
+              <div class="invalid_feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <div class="mb-3">
             <label class="form-label">Description</label>
             <textarea class="form-control form-control-lg w-100" name="description" rows="3" placeholder="Write here..."></textarea>
+            @error("description")
+              <div class="invalid_feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <div class="mb-3">
             <label class="form-label">Poster Image</label>
             <input type="text" class="form-control form-control-lg w-100" name="thumb" placeholder="https://...">
+            @error("thumb")
+              <div class="invalid_feedback">{{ $message }}</div>
+            @enderror
           </div>
+
+          
           <div class="mb-3">
             <label class="form-label">Price ($)</label>
             <input type="text" class="form-control form-control-lg w-100" name="price" placeholder="23.00">
+            @error("price")
+              <div class="invalid_feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <div class="mb-3">
             <label class="form-label">Series</label>
             <input type="text" class="form-control form-control-lg w-100" name="series" placeholder="Action Comics">
+            @error("series")
+              <div class="invalid_feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <div class="mb-3">
             <label class="form-label">Sale Date</label>
             <input type="date" class="form-control form-control-lg w-100" name="sale_date">
+            @error("sale_date")
+              <div class="invalid_feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <div class="mb-3">
             <label class="form-label">Type</label>
             <input type="text" class="form-control form-control-lg w-100" name="type" placeholder="Comic Book">
+            @error("type")
+              <div class="invalid_feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <div class="mb-3">
             <label class="form-label">Artists</label>
             <input type="text" class="form-control form-control-lg w-100" name="artists" placeholder="Justin Hartley">
+            @error("artists")
+              <div class="invalid_feedback">{{ $message }}</div>
+            @enderror
           </div>
+
           <div class="mb-3">
             <label class="form-label">Writers</label>
             <input type="text" class="form-control form-control-lg w-100" name="writers" placeholder="Mort Weisinger">
+            @error("writers")
+              <div class="invalid_feedback">{{ $message }}</div>
+            @enderror
           </div>
         
           <a class="btn btn-outline-secondary mt-3" href={{ route("comics.index") }}>Annulla</a>

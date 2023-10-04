@@ -28,8 +28,12 @@
         </div>
       </div>
       <div class="col-2 ms-auto mt-3">
-      {{-- button per tornare indietro nella index, non richiesto --}}
-      <a href={{ route("comics.index", ["id" => $comic->id]) }} class="btn btn-lg btn-outline-light">Indietro</a>
+        {{-- button per editare il comic --}}
+        <a href={{ route("comics.edit", ["id" => $comic->id]) }} class="btn btn-lg btn-outline-light">Modifica</a>
+      </div>
+      <div class="col-2 me-5 mt-3">
+        {{-- button per tornare indietro nella index, non richiesto --}}
+        <a href={{ route("comics.index", ["id" => $comic->id]) }} class="btn btn-lg btn-outline-light">Torna indietro</a>
       </div>
     </div>
   </div>

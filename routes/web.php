@@ -35,4 +35,4 @@ Route::get("/comics/{id}/edit", [ComicController::class, "edit"])->name("comics.
 Route::put("/comics/{id}", [ComicController::class, "update"])->name("comics.update");
 
 // ROTTA CRUD DESTROY
-Route::delete("/comics/{id}", [ComicController::class, "destroy"])->name("comics.destroy");
+Route::delete("/comics/{comic}", [ComicController::class, "destroy"])->name("comics.destroy");
