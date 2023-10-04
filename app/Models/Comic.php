@@ -11,11 +11,6 @@ class Comic extends Model {
     protected $table = "comics";
 
     protected $casts = [
-
-    /**
-     *
-     * @var array
-     */
         // così creo istanza di Carbon 
         // e posso utilizzare la funzione format nello show
         "sale_date" => "date",
