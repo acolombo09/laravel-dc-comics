@@ -32,6 +32,9 @@ class ComicController extends Controller {
         // dd($request->all());
         $data = $request->all();
 
+        $data["artists"] = explode(", ", $data["artists"]);
+        $data["writers"] = explode(", ", $data["writers"]);
+
         // creo nuova istanza
         $newComic = new Comic();
 
@@ -44,8 +47,8 @@ class ComicController extends Controller {
         $newComic->series = $data["series"];
         $newComic->type = $data["type"];
         // lo sistemo a monte altrimenti mi restituisce errore nello show
-        $newComic->artists = json_encode([$data["artists"]]);
-        $newComic->writers = json_encode([$data["writers"]]);
+        $newComic->artists = $data["artists"];
+        $newComic->writers = $data["writers"];
 
         
 
