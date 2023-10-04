@@ -79,8 +79,13 @@
                 <h6 class="show-title text-nowrap">Art by:</h6>
               </th>
               <td colspan="2">
-                {{-- implode aggiunto a seguito del cast nel model per l'array --}}
-                <a class="text-decoration-none" href="#">{{ implode(", ", $comic->artists) }}</a>
+                <a class="text-decoration-none" href="#">
+                  @if(is_array($comic['artists']))
+                    {{ implode(", ", $comic['artists']) }}
+                  @else
+                      {{ $comic['artists'] }}
+                  @endif
+                </a>
               </td>
             </tr>
             <tr>
@@ -88,8 +93,13 @@
                 <h6 class="show-title text-nowrap">Written by:</h6>
               </th>
               <td colspan="2">
-                {{-- implode aggiunto a seguito del cast nel model per l'array --}}
-                <a class="text-decoration-none" href="#">{{ implode(", ", $comic->writers) }}</a>
+                <a class="text-decoration-none" href="#">
+                  @if(is_array($comic['writers']))
+                    {{ implode(", ", $comic['writers']) }}
+                  @else
+                    {{ $comic['writers'] }}
+                  @endif
+                </a>
               </td>
             </tr>
           </tbody>

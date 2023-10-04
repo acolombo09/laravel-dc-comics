@@ -44,8 +44,8 @@ class ComicController extends Controller {
         $newComic->series = $data["series"];
         $newComic->type = $data["type"];
         // lo sistemo a monte altrimenti mi restituisce errore nello show
-        $newComic->artists = json_encode([$data["artists"]]);
-        $newComic->writers = json_encode([$data["writers"]]);
+        $newComic["artists"] = json_encode([$data["artists"]]);
+        $newComic["writers"] = json_encode([$data["writers"]]);
 
         
 
