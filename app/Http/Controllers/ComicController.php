@@ -73,6 +73,9 @@ class ComicController extends Controller {
 
         $newData = $request->all();
 
+        $newData["artists"] = explode(", ", $newData["artists"]);
+        $newData["writers"] = explode(", ", $newData["writers"]);
+
         // aggiorna i dati del comic tramite fill e save
         $comic->update($newData);
 
